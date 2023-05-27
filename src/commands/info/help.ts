@@ -1,6 +1,6 @@
 import { Command } from '../../interfaces/Command';
 import { SlashCommandBuilder } from '@discordjs/builders';
-import { APIEmbedField, CommandInteraction, EmbedBuilder, } from 'discord.js';
+import { APIEmbedField, CommandInteraction, EmbedBuilder } from 'discord.js';
 import BotClient from '../../structures/Client';
 import fs from 'fs';
 import path from 'path';
