@@ -5,6 +5,7 @@ import BotClient from "../../structures/Client";
 import mongoose from "mongoose";
 import { UserModel } from "../../models/economy/UserModel";
 import Utility from "../../structures/Utility";
+import { emojis } from "../../config.json"
 
 export default {
     data: new SlashCommandBuilder()
@@ -41,15 +42,15 @@ export default {
             .addFields(
                 {
                     name: "Coins",
-                    value: `${userDB.coins.toLocaleString()} coins`
+                    value: `${userDB.coins.toLocaleString()} coins ${emojis.coin}`
                 },
                 {
                     name: "Bank",
-                    value: `${userDB.bank.toLocaleString()} coins`
+                    value: `${userDB.bank.toLocaleString()} coins ${emojis.coin}`
                 },
                 {
                     name: "Total",
-                    value: `${(userDB.coins + userDB.bank).toLocaleString()} coins`
+                    value: `${(userDB.coins + userDB.bank).toLocaleString()} coins ${emojis.coin}`
                 }
             );
 

@@ -5,6 +5,7 @@ import BotClient from "../../structures/Client";
 import mongoose from "mongoose";
 import Utility from "../../structures/Utility";
 import { UserModel } from "../../models/economy/UserModel";
+import { emojis } from "../../config.json"
 
 export default {
     data: new SlashCommandBuilder()

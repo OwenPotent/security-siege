@@ -4,6 +4,7 @@ import { CommandInteraction, EmbedBuilder } from "discord.js";
 import BotClient from "../../structures/Client";
 import Utility from "../../structures/Utility";
 import { UserModel } from "../../models/economy/UserModel";
+import { emojis } from "../../config.json"
 
 export default {
     data: new SlashCommandBuilder()
@@ -65,7 +66,7 @@ export default {
                 iconURL: interaction.user.displayAvatarURL()
             })
             .setTimestamp()
-            .setDescription(`${amount.toLocaleString()} coins have been deposited to ${user.tag}'s bank account`);
+            .setDescription(`${amount.toLocaleString()} coins ${emojis.coin} have been deposited to ${user.tag}'s bank account`);
 
         await interaction.reply({
             embeds: [embed]

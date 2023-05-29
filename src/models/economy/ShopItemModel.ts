@@ -1,16 +1,12 @@
 import { Schema, model } from "mongoose";
 
-const ShopSchema = new Schema({
-    _id: {
-        type: String,
-        required: true
-    },
+const ShopItemSchema = new Schema({
     name: {
         type: String,
         required: true
     },
-    items: {
-        type: Array,
+    cost: {
+        type: Number,
         required: true
     },
     description: {
@@ -19,4 +15,4 @@ const ShopSchema = new Schema({
     }
 });
 
-export const ShopModel = model("Shop", ShopSchema);
+export const ShopItemModel = model("ShopItem", ShopItemSchema);

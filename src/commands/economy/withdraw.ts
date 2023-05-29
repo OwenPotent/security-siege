@@ -4,6 +4,7 @@ import { CommandInteraction, EmbedBuilder } from "discord.js";
 import BotClient from "../../structures/Client";
 import Utility from "../../structures/Utility";
 import { UserModel } from "../../models/economy/UserModel";
+import { emojis } from "../../config.json"
 
 export default {
     data: new SlashCommandBuilder()
